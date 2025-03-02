@@ -15,4 +15,9 @@ public class AppConfig {
 //        return "long";
 //    }
 
+    @Bean
+    public String getName() {
+        return "Hello, Genesis";
+    }
+
 }

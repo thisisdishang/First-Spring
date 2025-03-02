@@ -9,5 +9,8 @@ public class Main {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         MessagePrinter mp = context.getBean(MessagePrinter.class);
         mp.printMessage();
+
+        String value = context.getBean("getName", String.class);
+        System.out.println(value);
     }
 }
