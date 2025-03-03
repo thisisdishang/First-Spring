@@ -20,4 +20,14 @@ public class AppConfig {
         return "Hello, Genesis";
     }
 
+    @Bean
+    public String getMessage() {
+        return "Hii, Sherlock!";
+    }
+
+    @Bean
+    public Integer getAge() {
+        return 22;
+    }
+
 }
