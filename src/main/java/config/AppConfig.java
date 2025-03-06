@@ -1,9 +1,7 @@
 package config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import beans.BubbleSort;
+import org.springframework.context.annotation.*;
 
 // Creating and managing the objects (@Confiuration, @Bean)
 @Configuration
@@ -28,6 +26,12 @@ public class AppConfig {
     @Bean
     public Integer getAge() {
         return 22;
+    }
+
+    @Bean
+    @Primary
+    public BubbleSort bubbleSort() {
+        return new BubbleSort();
     }
 
 }
