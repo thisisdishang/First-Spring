@@ -1,6 +1,7 @@
 package config;
 
 import beans.BubbleSort;
+import beans.InsertionSort;
 import org.springframework.context.annotation.*;
 
 // Creating and managing the objects (@Confiuration, @Bean)
@@ -32,6 +33,11 @@ public class AppConfig {
     @Primary
     public BubbleSort bubbleSort() {
         return new BubbleSort();
+    }
+
+    @Bean
+    public InsertionSort insertionSort() {
+        return new InsertionSort();
     }
 
 }

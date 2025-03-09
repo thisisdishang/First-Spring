@@ -1,6 +1,7 @@
 package com.finlogic;
 
 import beans.BubbleSort;
+import beans.InsertionSort;
 import beans.MessagePrinter;
 import config.AppConfig;
 import config.ProjectConfig;
@@ -28,5 +29,12 @@ public class Main {
         BubbleSort bubbleSort = context.getBean(BubbleSort.class);
         bubbleSort.sort(numbers);
         Arrays.stream(numbers).forEach(System.out::println);
+
+        int[] numbers2 = {56, 12, 4, 6, 3, 2};
+        InsertionSort insertionSort = context.getBean(InsertionSort.class);
+        insertionSort.sort(numbers2);
+        for (int i : numbers2) {
+            System.out.print(i + " ");
+        }
     }
 }
